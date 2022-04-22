@@ -1,0 +1,70 @@
+{% extends 'basic.html' %} {% block body %}
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header"><i class="fas fa-bookmark"></i> Shortcuts</div>
+    <div class="card-body container">
+      <div class="row d-flex justify-content-center">
+        <a href="add_user" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-address-card fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Add User</p>
+          </div>
+        </a>
+        <a href="user_list" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-users fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">User List</p>
+          </div>
+        </a>
+        <a href="add_maintenance" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-coins fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Add Maintanance</p>
+          </div>
+        </a>
+        <a href="maintenance_list" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-list fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Maintanance List</p>
+          </div>
+        </a>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <a href="add_notice" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-file-alt fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Add Notice</p>
+          </div>
+        </a>
+        <a href="notice_list" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-clipboard-list fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Notice List</p>
+          </div>
+        </a>
+        <a href="gallery" class="text-decoration-none col-md-2 mb-3">
+          <div
+            class="pt-3 border rounded d-flex align-items-center flex-column"
+          >
+            <i class="fas fa-images fa-2x text-secondary"></i>
+            <p class="mt-2 text-secondary">Gallery</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

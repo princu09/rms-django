@@ -1,0 +1,47 @@
+{% extends 'basic.html' %} {% block body %}
+
+<div class="container mt-4">
+
+  <div class="card">
+    <div class="card-header"><i class="fas fa-pen"></i> Maintainance List</div>
+    <div class="card-body container">
+      <table id="table_id" class="display">
+        <thead>
+          <tr>
+            <th>Block No.</th>
+            <th>Installment</th>
+            <th>Penalty</th>
+            <th>Date of Payment</th>
+            <th>Payment Status</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in maintenance %}
+          <tr>
+            <td>{{i.block}}</td>
+            <td>{{i.installment}}</td>
+            <td>{{i.penalty}}</td>
+            <td>{{i.dop}}</td>
+            <td>{{i.p_status}}</td>
+            <td>{{i.status}}</td>
+            <td>
+              <a href="edit_maintenance/{{i.id}}" class="btn btn-success btn-sm">Edit</a>
+              <a href="delete_maintenance/{{i.id}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#table_id").DataTable();
+  });
+</script>
+
+{% endblock %}

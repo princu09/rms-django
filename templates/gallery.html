@@ -1,0 +1,27 @@
+{% extends 'basic.html' %} {% block body %}
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header"><i class="fas fa-images"></i> Add Photo</div>
+    <div class="card-body container">
+      <form action="gallery" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Image</label>
+          <div class="col-sm-4">
+            <input type="file" class="form-control" name="img" />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="mx-3 btn btn-sm btn-primary"
+          style="background: #2c3e50 !important"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

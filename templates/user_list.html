@@ -1,0 +1,53 @@
+{% extends 'basic.html' %} {% block body %}
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header"><i class="fas fa-list"></i> Users List</div>
+    <div class="card-body container">
+      <table id="table_id" class="display">
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>User Type</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Block No.</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+            <th>Email</th>
+            <th>Installment</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in member %}
+          <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.u_type}}</td>
+            <td>{{i.f_name}}</td>
+            <td>{{i.l_name}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.block}} - {{i.number}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.contact}}</td>
+            <td>{{i.email}}</td>
+            <td>1000</td>
+            <td>
+              <a href="delete_member/{{i.id}}" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#table_id").DataTable();
+  });
+</script>
+
+{% endblock body %}

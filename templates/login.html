@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RMS</title>
+
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/logo/logo.png' %}"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="{% static 'font-awesome/css/all.css' %}" />
+
+    <!-- jQuery -->
+    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+  </head>
+
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="min-height: 100vh"
+    >
+      <div class="container col-md-4">
+        <p class="h3 text-center mb-5">Admin Panel Login</p>
+        <form action="handle_login" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label>Username</label>
+            <input type="username" class="form-control" name="usrname" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="pswd" />
+          </div>
+          <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstap JS -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
